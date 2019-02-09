@@ -1,4 +1,7 @@
 # facial_recognition.py
+"""
+This file is working! if you install dependencies correctly
+"""
 
 from imutils import face_utils
 import dlib
@@ -11,7 +14,7 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(p)
  
 # load the input image and convert it to grayscale
-image = cv2.imread("/test_files/test1.png")
+image = cv2.imread("test_files/astronaut.png")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
  
 # detect faces in the grayscale image
