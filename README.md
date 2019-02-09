@@ -3,3 +3,11 @@
 Seems like this might be very useful: https://github.com/BerkeleyAutomation/perception. Make sure to run `pip install -e .` when cd'ed into its folder, though, to install dependencies.
 
 Also worth checking out, a different approach: https://github.com/af-3/Stereo_Vision
+
+## To run single-image face recognition
+
+Run `python3 facial_recognition.py`
+
+## To run realtime face recognition
+
+Run `python3 Webcam-Face-Detect/webcam_cv3.py`
