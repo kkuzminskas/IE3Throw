@@ -4,7 +4,17 @@ Seems like this might be very useful: https://github.com/BerkeleyAutomation/perc
 
 Also worth checking out, a different approach: https://github.com/af-3/Stereo_Vision
 
+## To run single-image face recognition
+
+Run `python3 facial_recognition.py`
+
+## To run realtime face recognition
+
+Run `python3 Webcam-Face-Detect/webcam_cv3.py`
+
+
 Video streaming tutorial: get your camera to stream a video! https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html
 
 
 Motor control: https://business.tutsplus.com/tutorials/controlling-dc-motors-using-python-with-a-raspberry-pi--cms-20051
+
