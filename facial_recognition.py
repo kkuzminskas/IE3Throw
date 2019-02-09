@@ -1,8 +1,4 @@
 # facial_recognition.py
-"""
-Obviously not exactly what we're looking for but put this in here bc it might be
-helpful to learn from
-"""
 
 from imutils import face_utils
 import dlib
@@ -15,7 +11,7 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(p)
  
 # load the input image and convert it to grayscale
-image = cv2.imread("/Users/jaspergilley/Documents/Website Photos/DSC_0032.JPG")
+image = cv2.imread("/test_files/test1.png")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
  
 # detect faces in the grayscale image
