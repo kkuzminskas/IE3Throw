@@ -4,6 +4,10 @@ Seems like this might be very useful: https://github.com/BerkeleyAutomation/perc
 
 Also worth checking out, a different approach: https://github.com/af-3/Stereo_Vision
 
+## Dependencies
+
+*After cloning,* make sure to run `git clone https://github.com/davisking/dlib`, `git clone https://github.com/BerkeleyAutomation/perception`, and `git clone https://github.com/shantnu/Webcam-Face-Detect` from within the folder you just cloned. GitHub's handling of submodules (that is, repos within a repo) is not great.
+
 ## To run single-image face recognition
 
 Run `python3 facial_recognition.py`
