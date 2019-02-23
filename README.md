@@ -6,7 +6,8 @@ Also worth checking out, a different approach: https://github.com/af-3/Stereo_Vi
 
 ## Raspberry Pi Connection wiht laptop
 
-boot up Raspberry Pi and run `ifconfig` to check ip address
+boot up Raspberry Pi and run `ifconfig` to check ip address.
+
 run `ssh pi@ipaddress` in terminal 
 
 ## Dependencies
