@@ -22,6 +22,10 @@ Run `python3 facial_recognition.py`
 
 Run `python3 Webcam-Face-Detect/webcam_cv3.py`
 
+Drawing documentation for opencv
+https://docs.opencv.org/2.4/doc/tutorials/core/basic_geometric_drawing/basic_geometric_drawing.html
+https://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html
+
 
 Video streaming tutorial: get your camera to stream a video! https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html
 
