@@ -17,12 +17,6 @@ rightMapX = calibration["rightMapX"]
 rightMapY = calibration["rightMapY"]
 rightROI = tuple(calibration["rightROI"])
 
-mindisp = random.randint(0, 50)
-print("mindisp is", mindisp)
-numdisp = random.randint(1, 4)
-print("numdisp is", numdisp)
-blocksize = random.randint(2, 100)
-print("blcoksize is", blocksize)
 
 while True:
     if not (left.grab() and right.grab()):
@@ -44,9 +38,9 @@ while True:
     rfn = cv2.cvtColor(fixedRight, cv2.COLOR_BGR2GRAY)
     
     stereo = cv2.StereoBM_create()
-    stereo.setMinDisparity(mindisp)
-    stereo.setNumDisparities(numdisp*16)
-    stereo.setBlockSize(blocksize)
+    stereo.setMinDisparity(4)
+    stereo.setNumDisparities(128)
+    stereo.setBlockSize(21)
     stereo.setSpeckleRange(16)
     stereo.setSpeckleWindowSize(45)
     disparity = stereo.compute(lfn,rfn)

@@ -5,6 +5,14 @@ import sys
 import numpy as np
 import cv2
 
+left = cv2.VideoCapture(0)
+right = cv2.VideoCapture(1)
+_, leftFrame = left.retrieve()
+_, rightFrame = right.retrieve()
+
+cv2.imwrite("/pi/home/Code/calibration/cal1.jpg")
+cv2.imwrite("/pi/home/Code/calibration/cal2.jpg")
+
 CHESSBOARD_SIZE = (7, 6)
 CHESSBOARD_OPTIONS = (cv2.CALIB_CB_ADAPTIVE_THRESH |
         cv2.CALIB_CB_NORMALIZE_IMAGE | cv2.CALIB_CB_FAST_CHECK)
@@ -20,15 +28,15 @@ TERMINATION_CRITERIA = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_MAX_ITER, 30,
         0.001)
 
 MAX_IMAGES = 64
-
+"""
 if len(sys.argv) != 4:
     print("Syntax: {0} LEFT_IMAGE_DIR RIGHT_IMAGE_DIR OUTPUT_FILENAME"
             .format(sys.argv[0]))
-    sys.exit(1)
+    sys.exit(1)"""
 
-leftImageDir = sys.argv[1]
-rightImageDir = sys.argv[2]
-outputFile = sys.argv[3]
+leftImageDir = "/pi/home/Code/calibration/cal1.jpg"
+rightImageDir = "/pi/home/Code/calibration/cal2.jpg"
+outputFile = "/pi/home/Code/calibration/model.npz"
 
 def readImagesAndFindChessboards(imageDirectory):
     cacheFile = "{0}/chessboards.npz".format(imageDirectory)
