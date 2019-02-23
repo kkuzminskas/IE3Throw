@@ -5,6 +5,8 @@ import numpy as np
 left = cv2.VideoCapture(0)
 right = cv2.VideoCapture(1)
 
+REMAP_INTERPOLATION = cv2.INTER_LINEAR
+
 while True:
     if not (left.grab() and right.grab()):
         print("No more frames")
