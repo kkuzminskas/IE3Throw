@@ -1,5 +1,6 @@
 import cv2
 from matplotlib import pyplot as plt
+import numpy as np
 
 left = cv2.VideoCapture(0)
 right = cv2.VideoCapture(1)
@@ -17,10 +18,22 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-    lfn = cv2.cvtColor(leftFrame, cv2.COLOR_BGR2GRAY)
-    rfn = cv2.cvtColor(rightFrame, cv2.COLOR_BGR2GRAY)
+    calibration = np.load("/home/pi/Code/IE3Throw/calibration.npz", allow_pickle=False)
+    imageSize = tuple(calibration["imageSize"])
+    leftMapX = calibration["leftMapX"]
+    leftMapY = calibration["leftMapY"]
+    leftROI = tuple(calibration["leftROI"])
+    rightMapX = calibration["rightMapX"]
+    rightMapY = calibration["rightMapY"]
+    rightROI = tuple(calibration["rightROI"])
+
+    fixedLeft = cv2.remap(leftFrame, leftMapX, leftMapY, REMAP_INTERPOLATION)
+    fixedRight = cv2.remap(rightFrame, rightMapX, rightMapY, REMAP_INTERPOLATION)
+
+    lfn = cv2.cvtColor(fixedLeft, cv2.COLOR_BGR2GRAY)
+    rfn = cv2.cvtColor(fixedRight, cv2.COLOR_BGR2GRAY)
     
-    stereo = cv2.StereoBM_create(numDisparities=16, blockSize=15)
+    stereo = cv2.StereoBM_create()
     stereo.setMinDisparity(4)
     stereo.setNumDisparities(128)
     stereo.setBlockSize(21)
