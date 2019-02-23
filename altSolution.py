@@ -36,7 +36,7 @@ while True:
     rfn = cv2.cvtColor(fixedRight, cv2.COLOR_BGR2GRAY)
     
     stereo = cv2.StereoBM_create()
-    stereo.setMinDisparity(2)
+    stereo.setMinDisparity(64)
     stereo.setNumDisparities(70)
     stereo.setBlockSize(9)
     stereo.setSpeckleRange(16)
