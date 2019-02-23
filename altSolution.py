@@ -15,9 +15,12 @@ while True:
     #cv2.imshow('right', rightFrame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+    lfn = cv2.cvtColor(leftFrame, cv2.COLOR_BGR2GRAY)
+    rfn = cv2.cvtColor(rightFrame, cv2.COLOR_BGR2GRAY)
     
     stereo = cv2.StereoBM_create(numDisparities=16, blockSize=15)
-    disparity = stereo.compute(leftFrame,rightFrame)
+    disparity = stereo.compute(lfn,rfn)
     cv2.imshow(disparity,'gray')
 
 left.release()
