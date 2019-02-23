@@ -22,8 +22,8 @@ while True:
     
     stereo = cv2.StereoBM_create(numDisparities=16, blockSize=15)
     disparity = stereo.compute(lfn,rfn)
-    print(disparity)
-    #plt.imshow(disparity,'gray')
+    DEPTH_VISUALIZATION_SCALE = 2048
+    cv2.imshow('depth', disparity / DEPTH_VISUALIZATION_SCALE)
 
 left.release()
 right.release()
