@@ -21,6 +21,11 @@ while True:
     rfn = cv2.cvtColor(rightFrame, cv2.COLOR_BGR2GRAY)
     
     stereo = cv2.StereoBM_create(numDisparities=16, blockSize=15)
+    stereo.setMinDisparity(4)
+    stereo.setNumDisparities(128)
+    stereo.setBlockSize(21)
+    stereo.setSpeckleRange(16)
+    stereo.setSpeckleWindowSize(45)
     disparity = stereo.compute(lfn,rfn)
     DEPTH_VISUALIZATION_SCALE = 2048
     cv2.imshow('depth', disparity / DEPTH_VISUALIZATION_SCALE)
