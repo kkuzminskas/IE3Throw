@@ -10,8 +10,8 @@ right = cv2.VideoCapture(1)
 _, leftFrame = left.retrieve()
 _, rightFrame = right.retrieve()
 
-cv2.imwrite("/pi/home/Code/calibration/cal1.jpg", leftFrame)
-cv2.imwrite("/pi/home/Code/calibration/cal2.jpg", rightFrame)
+cv2.imwrite("/pi/home/Code/calibration/cal1.jpeg", leftFrame)
+cv2.imwrite("/pi/home/Code/calibration/cal2.jpeg", rightFrame)
 print("images written")
 
 CHESSBOARD_SIZE = (7, 6)
