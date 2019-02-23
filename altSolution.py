@@ -7,6 +7,15 @@ right = cv2.VideoCapture(1)
 
 REMAP_INTERPOLATION = cv2.INTER_LINEAR
 
+calibration = np.load("/home/pi/Code/IE3Throw/calibration.npz", allow_pickle=False)
+imageSize = tuple(calibration["imageSize"])
+leftMapX = calibration["leftMapX"]
+leftMapY = calibration["leftMapY"]
+leftROI = tuple(calibration["leftROI"])
+rightMapX = calibration["rightMapX"]
+rightMapY = calibration["rightMapY"]
+rightROI = tuple(calibration["rightROI"])
+
 while True:
     if not (left.grab() and right.grab()):
         print("No more frames")
@@ -20,15 +29,6 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-    calibration = np.load("/home/pi/Code/IE3Throw/calibration.npz", allow_pickle=False)
-    imageSize = tuple(calibration["imageSize"])
-    leftMapX = calibration["leftMapX"]
-    leftMapY = calibration["leftMapY"]
-    leftROI = tuple(calibration["leftROI"])
-    rightMapX = calibration["rightMapX"]
-    rightMapY = calibration["rightMapY"]
-    rightROI = tuple(calibration["rightROI"])
-
     fixedLeft = cv2.remap(leftFrame, leftMapX, leftMapY, REMAP_INTERPOLATION)
     fixedRight = cv2.remap(rightFrame, rightMapX, rightMapY, REMAP_INTERPOLATION)
 
@@ -36,9 +36,9 @@ while True:
     rfn = cv2.cvtColor(fixedRight, cv2.COLOR_BGR2GRAY)
     
     stereo = cv2.StereoBM_create()
-    stereo.setMinDisparity(4)
-    stereo.setNumDisparities(128)
-    stereo.setBlockSize(21)
+    stereo.setMinDisparity(2)
+    stereo.setNumDisparities(70)
+    stereo.setBlockSize(9)
     stereo.setSpeckleRange(16)
     stereo.setSpeckleWindowSize(45)
     disparity = stereo.compute(lfn,rfn)
