@@ -10,8 +10,8 @@ right = cv2.VideoCapture(1)
 _, leftFrame = left.retrieve()
 _, rightFrame = right.retrieve()
 
-cv2.imwrite("/pi/home/Code/calibration/cal1.jpg")
-cv2.imwrite("/pi/home/Code/calibration/cal2.jpg")
+cv2.imwrite("/pi/home/Code/calibration/cal1.jpg", leftFrame)
+cv2.imwrite("/pi/home/Code/calibration/cal2.jpg", rightFrame)
 
 CHESSBOARD_SIZE = (7, 6)
 CHESSBOARD_OPTIONS = (cv2.CALIB_CB_ADAPTIVE_THRESH |
