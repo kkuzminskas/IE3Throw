@@ -1,4 +1,5 @@
 import cv2
+from matplotlib import pyplot as plt
 
 left = cv2.VideoCapture(0)
 right = cv2.VideoCapture(1)
