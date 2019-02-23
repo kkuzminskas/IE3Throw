@@ -34,8 +34,8 @@ if len(sys.argv) != 4:
             .format(sys.argv[0]))
     sys.exit(1)"""
 
-leftImageDir = "/pi/home/Code/calibration/cal1.jpg"
-rightImageDir = "/pi/home/Code/calibration/cal2.jpg"
+leftImageDir = "/pi/home/Code/calibration"
+rightImageDir = "/pi/home/Code/calibration"
 outputFile = "/pi/home/Code/calibration/model.npz"
 
 def readImagesAndFindChessboards(imageDirectory):
