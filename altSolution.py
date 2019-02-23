@@ -16,6 +16,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     
+    stereo = cv.StereoBM_create(numDisparities=16, blockSize=15)
     disparity = stereo.compute(imgL,imgR)
     cv2.imshow(disparity,'gray')
 
