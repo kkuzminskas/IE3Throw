@@ -32,3 +32,5 @@ Video streaming tutorial: get your camera to stream a video! https://opencv-pyth
 
 Motor control: https://business.tutsplus.com/tutorials/controlling-dc-motors-using-python-with-a-raspberry-pi--cms-20051
 
+Potentially helpful stereo vision stuff
+https://docs.opencv.org/3.1.0/dd/d53/tutorial_py_depthmap.html
