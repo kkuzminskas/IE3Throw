@@ -12,6 +12,7 @@ _, rightFrame = right.retrieve()
 
 cv2.imwrite("/pi/home/Code/calibration/cal1.jpg", leftFrame)
 cv2.imwrite("/pi/home/Code/calibration/cal2.jpg", rightFrame)
+print("images written")
 
 CHESSBOARD_SIZE = (7, 6)
 CHESSBOARD_OPTIONS = (cv2.CALIB_CB_ADAPTIVE_THRESH |
@@ -45,7 +46,7 @@ def readImagesAndFindChessboards(imageDirectory):
         print("Loading image data from cache file at {0}".format(cacheFile))
         return (list(cache["filenames"]), list(cache["objectPoints"]),
                 list(cache["imagePoints"]), tuple(cache["imageSize"]))
-    except IOError:
+    except:
         print("Cache file at {0} not found".format(cacheFile))
 
     print("Reading images at {0}".format(imageDirectory))
