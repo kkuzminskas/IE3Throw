@@ -1,29 +1,21 @@
 import cv2
 
-cam = cv2.VideoCapture(0)
+left = cv2.VideoCapture(0)
+right = cv2.VideoCapture(1)
 
-cv2.namedWindow("test")
-
-img_counter = 0
-
-while True:
-    ret, frame = cam.read()
-    cv2.imshow("test", frame)
-    if not ret:
+while(True):
+    if not (left.grab() and right.grab()):
+        print("No more frames")
         break
-    k = cv2.waitKey(1)
 
-    if k%256 == 27:
-        # ESC pressed
-        print("Escape hit, closing...")
+    _, leftFrame = left.retrieve()
+    _, rightFrame = right.retrieve()
+
+    cv2.imshow('left', leftFrame)
+    cv2.imshow('right', rightFrame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-    elif k%256 == 32:
-        # SPACE pressed
-        img_name = "opencv_frame_{}.png".format(img_counter)
-        cv2.imwrite(img_name, frame)
-        print("{} written!".format(img_name))
-        img_counter += 1
 
-cam.release()
-
+left.release()
+right.release()
 cv2.destroyAllWindows()
