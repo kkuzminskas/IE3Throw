@@ -34,3 +34,6 @@ Motor control: https://business.tutsplus.com/tutorials/controlling-dc-motors-usi
 
 Potentially helpful stereo vision stuff
 https://docs.opencv.org/3.1.0/dd/d53/tutorial_py_depthmap.html
+
+Another stereo solution:
+https://albertarmea.com/post/opencv-stereo-camera/
