@@ -22,7 +22,8 @@ while True:
     
     stereo = cv2.StereoBM_create(numDisparities=16, blockSize=15)
     disparity = stereo.compute(lfn,rfn)
-    plt.imshow(disparity,'gray')
+    print(disparity)
+    #plt.imshow(disparity,'gray')
 
 left.release()
 right.release()
