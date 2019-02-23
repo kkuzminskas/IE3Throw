@@ -83,7 +83,7 @@ def readImagesAndFindChessboards(imageDirectory):
         # Needed to draw the window
         cv2.waitKey(1)
 
-    cv2.destroyWindow(imageDirectory)
+    #cv2.destroyWindow(imageDirectory)
 
     print("Found corners in {0} out of {1} images"
             .format(len(imagePoints), len(imagePaths)))
