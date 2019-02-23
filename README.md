@@ -4,9 +4,10 @@ Seems like this might be very useful: https://github.com/BerkeleyAutomation/perc
 
 Also worth checking out, a different approach: https://github.com/af-3/Stereo_Vision
 
-## Raspberry Pi Connection
+## Raspberry Pi Connection wiht laptop
 
-run `ssh pi@10.106.2.57`
+boot up Raspberry Pi and run `ifconfig` to check ip address
+run `ssh pi@ipaddress` in terminal 
 
 ## Dependencies
 
