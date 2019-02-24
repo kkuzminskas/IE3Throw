@@ -62,11 +62,18 @@ def action(changePin, action):
 def parseJSdata():
    print("key: ")
    key = request.form['keyboard']
-   if(key == "a"):
-      print("a")
-   elif(key == "s"):
-      print("s")
-   return "hello world"
+   if(key == 'a'):
+      print('left')
+   elif(key == 's'):
+      print('down')
+   elif(key == 'w'):
+      print('up')
+   elif(key == 'd'):
+      print('right')
+   elif(key == 'j'):
+      print("shoot")
+   return "return"
+   
 
 if __name__ == "__main__":
     # send request to 10.105.85.73:5000
