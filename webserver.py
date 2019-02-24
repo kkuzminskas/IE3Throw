@@ -1,5 +1,6 @@
 #import RPi.GPIO as GPIO
 from flask import Flask, render_template, request
+import json
 app = Flask(__name__)
 
 #GPIO.setmode(GPIO.BCM)
@@ -56,6 +57,16 @@ def action(changePin, action):
    }
 
    return render_template('webserver.html', **templateData)
+
+@app.route("/postmethod",methods = ['POST'])
+def parseJSdata():
+   print("key: ")
+   key = request.form['keyboard']
+   if(key == "a"):
+      print("a")
+   elif(key == "s"):
+      print("s")
+   return "hello world"
 
 if __name__ == "__main__":
     # send request to 10.105.85.73:5000
