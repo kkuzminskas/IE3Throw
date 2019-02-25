@@ -37,3 +37,6 @@ https://docs.opencv.org/3.1.0/dd/d53/tutorial_py_depthmap.html
 
 Another stereo solution:
 https://albertarmea.com/post/opencv-stereo-camera/
+
+Very helpful Flask video streaming explanation:
+https://blog.miguelgrinberg.com/post/video-streaming-with-flask
