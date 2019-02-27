@@ -23,7 +23,20 @@ def generator():
       if not video_cap.isOpened():
          raise RuntimeError('camera not started')
       _, img = video_cap.read()
+      # print(img.shape) #image.shape = 480 (height) * 640 (width) *3 (BGR)
+      center_x = 320
+      center_y = 240
+      Out_r = 25
+      in_r = 6
+      cv2.circle(img, (center_x, center_y), Out_r, (0, 0, 0), 2)
+      cv2.line(img, (center_x, center_y - Out_r), (center_x, center_y - in_r), (0, 0, 0), 1)
+      cv2.line(img, (center_x, center_y + Out_r), (center_x, center_y + in_r), (0, 0, 0), 1)
+      cv2.line(img, (center_x - Out_r, center_y), (center_x - in_r, center_y), (0, 0, 0), 1)
+      cv2.line(img, (center_x + Out_r, center_y), (center_x + in_r, center_y), (0, 0, 0), 1)
+
       result = cv2.imencode('.jpg', img)[1].tobytes()
+
+
         # print(type(result))
       yield (b'--frame\r\n'
             b'Content-Type: image/jpeg\r\n\r\n' + result + b'\r\n\r\n')

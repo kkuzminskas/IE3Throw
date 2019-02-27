@@ -15,8 +15,24 @@
 </head>
 
 <body>
-   <h1>Ping-pong Shooting!</h1>
-   <img src="{{ url_for('video_feed') }}">
+   <div class="heading">
+      <h1>Ping-pong Shooting!</h1>
+   </div>
+
+   <div class="mainScreen">
+      <div class="streamWrapper">
+         <img src="{{ url_for('video_feed') }}">
+      </div>
+
+      <div class="barWrapper">
+         <div class="instruction">
+            <img src="/static/keyboard_asdw.png" id="asdwKey"> for movement
+
+            <img src="/static/k_icon.png" id="kKey"> for shooting
+         </div>
+      </div>
+   </div>
+   
    <!-- <h1>RPi Web Server</h1>
    {% for pin in pins %}
    <h2>{{ pins[pin].name }}

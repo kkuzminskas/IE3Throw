@@ -1,0 +1,51 @@
+body{
+    /* background-image: url("/static/Free_Shmup_Sprites_Spacescape.png") */
+    /* background-color: green; */
+}
+
+.heading{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: yellow;
+    height: 100px;
+}
+
+.mainScreen{
+    width: 100%;
+    height: 500px;;
+
+}
+
+.streamWrapper{
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    float: left;
+}
+
+.infoWrapper{
+    width: 40%;
+    float: left;
+    height: inherit;
+    height: inherit;
+}
+
+#asdwKey{
+    width: 100px;
+    height: 60px;
+}
+
+#kKey{
+    width: 40px;
+    height: 40px;
+}
+
+
+.instruction{
+    width: 100%;
+    height: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
