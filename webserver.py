@@ -53,7 +53,7 @@ def generator():
 
       # if anterior != len(faces):
       #    anterior = len(faces)
-      #    log.info("faces: "+str(len(faces))+" at "+str(dt.datetime.now()))
+      #    log.info("faces: "+str(len(faces))+" at "+str(dt.datetime.now()))"""
 
       #frame.shape = 480 (height) * 640 (width) *3 (BGR)
       # draw telescope 
@@ -65,7 +65,7 @@ def generator():
       cv2.line(frame, (center_x, center_y - Out_r), (center_x, center_y - in_r), (0, 0, 0), 1)
       cv2.line(frame, (center_x, center_y + Out_r), (center_x, center_y + in_r), (0, 0, 0), 1)
       cv2.line(frame, (center_x - Out_r, center_y), (center_x - in_r, center_y), (0, 0, 0), 1)
-      cv2.line(frame, (center_x + Out_r, center_y), (center_x + in_r, center_y), (0, 0, 0), 1)"""
+      cv2.line(frame, (center_x + Out_r, center_y), (center_x + in_r, center_y), (0, 0, 0), 1)
 
       result = cv2.imencode('.jpg', frame)[1].tobytes()
 
