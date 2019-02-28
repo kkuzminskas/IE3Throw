@@ -12,8 +12,13 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("ml", type=str)
-
 args = parser.parse_args()
+
+ml = bool(args.ml)
+if ml:
+   print("Performing facial recognition")
+else:
+   print("Not doing facial recognition")
 
 video_cap = cv2.VideoCapture(1)
 cascPath = "haarcascade_frontalface_default.xml"
@@ -41,7 +46,7 @@ def generator():
          raise RuntimeError('camera not started')
       _, frame = video_cap.read()
       
-      if bool(args.ml):
+      if ml:
          #facial recognization
          gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #opencv color converter
          faces = faceCascade.detectMultiScale(
