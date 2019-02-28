@@ -14,10 +14,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument("ml", type=str)
 args = parser.parse_args()
 
-ml = bool(args.ml)
-if ml:
+if args.ml == "True" or args.ml == "true":
    print("Performing facial recognition")
+   ml = True
 else:
+   ml = False
    print("Not doing facial recognition")
 
 video_cap = cv2.VideoCapture(1)
