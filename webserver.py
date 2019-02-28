@@ -103,7 +103,7 @@ def parseJSdata():
       print('right')
    elif(key == 'k'):
       print("accumulating power")
-   elif(key == 'r'):    #when k released
+   elif(key == 'r'):
       print("shoot!")
 
    return "return"
