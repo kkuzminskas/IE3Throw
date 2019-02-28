@@ -34,7 +34,7 @@ def generator():
       if not video_cap.isOpened():
          raise RuntimeError('camera not started')
       _, frame = video_cap.read()
-
+      """
       #facial recognization
       gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #opencv color converter
       faces = faceCascade.detectMultiScale(
@@ -65,7 +65,7 @@ def generator():
       cv2.line(frame, (center_x, center_y - Out_r), (center_x, center_y - in_r), (0, 0, 0), 1)
       cv2.line(frame, (center_x, center_y + Out_r), (center_x, center_y + in_r), (0, 0, 0), 1)
       cv2.line(frame, (center_x - Out_r, center_y), (center_x - in_r, center_y), (0, 0, 0), 1)
-      cv2.line(frame, (center_x + Out_r, center_y), (center_x + in_r, center_y), (0, 0, 0), 1)
+      cv2.line(frame, (center_x + Out_r, center_y), (center_x + in_r, center_y), (0, 0, 0), 1)"""
 
       result = cv2.imencode('.jpg', frame)[1].tobytes()
 
@@ -98,5 +98,5 @@ def parseJSdata():
    
 
 if __name__ == "__main__":
-    # send request to 10.105.85.73:5000
+    # send request to http://10.106.2.85:5000
     app.run(host='0.0.0.0')
