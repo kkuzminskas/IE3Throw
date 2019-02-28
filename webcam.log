@@ -581,3 +581,475 @@ INFO:root:faces: 2 at 2019-02-23 14:38:34.535268
 INFO:root:faces: 0 at 2019-02-23 14:38:35.924182
 INFO:root:faces: 1 at 2019-02-23 14:38:37.299123
 INFO:root:faces: 0 at 2019-02-23 14:38:40.580522
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 17:57:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 17:57:33] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 17:57:33] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 17:57:33] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 17:57:33] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 17:57:34] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:26] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:28] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:29] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:29] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:32] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:33] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:33] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:34] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:34] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:34] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:35] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:36] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:36] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:36] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:36] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:37] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:38] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:39] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:40] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:41] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:42] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:43] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:44] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:45] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:46] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 17:59:47] "POST /postmethod HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 18:03:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Feb/2019 18:03:42] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:04:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:04:48] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:04:48] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:04:48] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:04:48] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:04:49] "GET /video_feed HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:17] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:17] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:17] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:17] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:17] "GET /video_feed HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:45] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:45] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:45] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:45] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:46] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:49] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:49] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:49] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:49] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:49] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:51] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:51] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:51] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:51] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:51] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:52] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:52] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:52] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:52] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:52] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:53] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:54] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:06:55] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:07:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:07:42] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:07:42] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:07:42] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:07:42] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:07:43] "GET /video_feed HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:08:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:08:33] "GET /static/webserver.js HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:08:33] "GET /static/webserver.css HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:08:33] "GET /static/keyboard_asdw.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:08:33] "GET /static/k_icon.png HTTP/1.1" 200 -
+INFO:werkzeug:129.105.10.141 - - [27/Feb/2019 18:08:34] "GET /video_feed HTTP/1.1" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 270, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\serving.py", line 260, in execute
+    for data in application_iter:
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wsgi.py", line 870, in __next__
+    return self._next()
+  File "C:\Users\syctudent\AppData\Local\Programs\Python\Python36\lib\site-packages\werkzeug\wrappers.py", line 82, in _iter_encoded
+    for item in iterable:
+  File "D:\Northwestern\2019Winter\IEEE-app\IE3Throw\webserver.py", line 54, in generator
+    if anterior != len(faces):
+UnboundLocalError: local variable 'anterior' referenced before assignment

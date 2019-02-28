@@ -11,6 +11,7 @@
    <script type = "text/javascript" src="/static/webserver.js"></script>
    <link rel="stylesheet" type="text/css" href="/static/webserver.css"></link>
    <link rel="icon" href="data:,">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
@@ -24,11 +25,18 @@
          <img src="{{ url_for('video_feed') }}">
       </div>
 
-      <div class="barWrapper">
+      <div class="infoWrapper">
          <div class="instruction">
-            <img src="/static/keyboard_asdw.png" id="asdwKey"> for movement
+            <img src="/static/keyboard_asdw.png" id="asdwKey"> for movement <br>
 
-            <img src="/static/k_icon.png" id="kKey"> for shooting
+            Holding <img src="/static/k_icon.png" id="kKey"> for accumulating power and shoot.
+         </div>
+         
+         <div class="energyWrap">
+            <div class="progressBarContainer">
+               <div id="progressBar" class="progressBar"> </div>
+               <p>power span</p>
+            </div>
          </div>
       </div>
    </div>

@@ -3,7 +3,17 @@ from flask import Flask, render_template, request, Response
 import json
 app = Flask(__name__)
 import cv2
-video_cap = cv2.VideoCapture(0)
+import sys
+import math
+import logging as log
+import datetime as dt
+from time import sleep
+
+video_cap = cv2.VideoCapture(1)
+cascPath = "haarcascade_frontalface_default.xml"
+faceCascade = cv2.CascadeClassifier(cascPath)
+log.basicConfig(filename='webcam.log',level=log.INFO)
+anterior = 0
 
 #GPIO.setmode(GPIO.BCM)
 
@@ -18,26 +28,48 @@ pins = {
 def main():
    return render_template('webserver.html')
 
+#generator() and video_feed are a pair of function that handles the video streaming
 def generator():
    while True:
       if not video_cap.isOpened():
          raise RuntimeError('camera not started')
-      _, img = video_cap.read()
-      # print(img.shape) #image.shape = 480 (height) * 640 (width) *3 (BGR)
+      _, frame = video_cap.read()
+
+      #facial recognization
+      gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #opencv color converter
+      faces = faceCascade.detectMultiScale(
+        gray,
+        scaleFactor=1.1,
+        minNeighbors=5,
+        minSize=(20, 20)
+      )
+
+      for (x, y, w, h) in faces:
+        
+        # cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        cv2.circle(frame, (x + int(w/2), y + int(h/2)), int(math.sqrt(w*w+h*h)/2), (0, 255, 0), 2)
+        cv2.line(frame, (x,y),(x+w, y+h), (0, 0, 255), 2)
+        cv2.line(frame, (x + w,y), (x, y + h), (0, 0, 255), 2 )
+
+      # if anterior != len(faces):
+      #    anterior = len(faces)
+      #    log.info("faces: "+str(len(faces))+" at "+str(dt.datetime.now()))
+
+      #frame.shape = 480 (height) * 640 (width) *3 (BGR)
+      # draw telescope 
       center_x = 320
       center_y = 240
       Out_r = 25
       in_r = 6
-      cv2.circle(img, (center_x, center_y), Out_r, (0, 0, 0), 2)
-      cv2.line(img, (center_x, center_y - Out_r), (center_x, center_y - in_r), (0, 0, 0), 1)
-      cv2.line(img, (center_x, center_y + Out_r), (center_x, center_y + in_r), (0, 0, 0), 1)
-      cv2.line(img, (center_x - Out_r, center_y), (center_x - in_r, center_y), (0, 0, 0), 1)
-      cv2.line(img, (center_x + Out_r, center_y), (center_x + in_r, center_y), (0, 0, 0), 1)
+      cv2.circle(frame, (center_x, center_y), Out_r, (0, 0, 0), 2)
+      cv2.line(frame, (center_x, center_y - Out_r), (center_x, center_y - in_r), (0, 0, 0), 1)
+      cv2.line(frame, (center_x, center_y + Out_r), (center_x, center_y + in_r), (0, 0, 0), 1)
+      cv2.line(frame, (center_x - Out_r, center_y), (center_x - in_r, center_y), (0, 0, 0), 1)
+      cv2.line(frame, (center_x + Out_r, center_y), (center_x + in_r, center_y), (0, 0, 0), 1)
 
-      result = cv2.imencode('.jpg', img)[1].tobytes()
+      result = cv2.imencode('.jpg', frame)[1].tobytes()
 
 
-        # print(type(result))
       yield (b'--frame\r\n'
             b'Content-Type: image/jpeg\r\n\r\n' + result + b'\r\n\r\n')
                
@@ -48,7 +80,6 @@ def video_feed():
 
 @app.route("/postmethod",methods = ['POST'])
 def parseJSdata():
-   print("key: ")
    key = request.form['keyboard']
    if(key == 'a'):
       print('left')
@@ -58,8 +89,10 @@ def parseJSdata():
       print('up')
    elif(key == 'd'):
       print('right')
-   elif(key == 'j'):
-      print("shoot")
+   elif(key == 'k'):
+      print("accumulating power")
+   elif(key == 'r'):    #when k released
+      print("shoot!")
 
    return "return"
    
