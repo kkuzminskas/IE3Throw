@@ -7,7 +7,8 @@ body{
     width: 100%;
     text-align: center;
     padding: 10px;
-    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(89, 0, 255);
     height: 100px;
 }
 
