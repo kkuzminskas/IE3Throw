@@ -8,6 +8,12 @@ import math
 import logging as log
 import datetime as dt
 from time import sleep
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("ml", type=str)
+
+args = parser.parse_args()
 
 video_cap = cv2.VideoCapture(1)
 cascPath = "haarcascade_frontalface_default.xml"
@@ -34,22 +40,22 @@ def generator():
       if not video_cap.isOpened():
          raise RuntimeError('camera not started')
       _, frame = video_cap.read()
-      """
-      #facial recognization
-      gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #opencv color converter
-      faces = faceCascade.detectMultiScale(
-        gray,
-        scaleFactor=1.1,
-        minNeighbors=5,
-        minSize=(20, 20)
-      )
+      
+      if bool(args.ml):
+         #facial recognization
+         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #opencv color converter
+         faces = faceCascade.detectMultiScale(
+         gray,
+         scaleFactor=1.1,
+         minNeighbors=5,
+         minSize=(20, 20)
+         )
 
-      for (x, y, w, h) in faces:
-        
-        # cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        cv2.circle(frame, (x + int(w/2), y + int(h/2)), int(math.sqrt(w*w+h*h)/2), (0, 255, 0), 2)
-        cv2.line(frame, (x,y),(x+w, y+h), (0, 0, 255), 2)
-        cv2.line(frame, (x + w,y), (x, y + h), (0, 0, 255), 2 )
+         for (x, y, w, h) in faces:
+            # cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            cv2.circle(frame, (x + int(w/2), y + int(h/2)), int(math.sqrt(w*w+h*h)/2), (0, 255, 0), 2)
+            cv2.line(frame, (x,y),(x+w, y+h), (0, 0, 255), 2)
+            cv2.line(frame, (x + w,y), (x, y + h), (0, 0, 255), 2 )
 
       # if anterior != len(faces):
       #    anterior = len(faces)
