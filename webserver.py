@@ -9,7 +9,11 @@ import logging as log
 import datetime as dt
 from time import sleep
 import argparse
+import serial
 
+
+ser = serial.Serial('/dev/ttyUSB0', 9600)
+instructions = {'a', 's', 'd' ,'w', 'k', 'r'}
 parser = argparse.ArgumentParser()
 parser.add_argument("ml", type=str)
 args = parser.parse_args()
@@ -93,18 +97,24 @@ def video_feed():
 @app.route("/postmethod",methods = ['POST'])
 def parseJSdata():
    key = request.form['keyboard']
-   if(key == 'a'):
-      print('left')
-   elif(key == 's'):
-      print('down')
-   elif(key == 'w'):
-      print('up')
-   elif(key == 'd'):
-      print('right')
-   elif(key == 'k'):
-      print("accumulating power")
-   elif(key == 'r'):
-      print("shoot!")
+
+   if(key in instructions):
+      ser.write(key.encode())
+      print("instruction " + key + " sent")
+   
+   # if(key == )
+   # if(key == 'a'):
+   #    print('left')
+   # elif(key == 's'):
+   #    print('down')
+   # elif(key == 'w'):
+   #    print('up')
+   # elif(key == 'd'):
+   #    print('right')
+   # elif(key == 'k'):
+   #    print("accumulating power")
+   # elif(key == 'r'):
+   #    print("shoot!")
 
    return "return"
    
