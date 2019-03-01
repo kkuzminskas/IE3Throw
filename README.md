@@ -40,3 +40,6 @@ https://albertarmea.com/post/opencv-stereo-camera/
 
 Very helpful Flask video streaming explanation:
 https://blog.miguelgrinberg.com/post/video-streaming-with-flask
+
+## activate opencv virtual environment
+Run `source venv/bin/activate`
