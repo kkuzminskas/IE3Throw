@@ -97,7 +97,7 @@ def video_feed():
 @app.route("/postmethod",methods = ['POST'])
 def parseJSdata():
    key = request.form['keyboard']
-
+   print("key")
    if(key in instructions):
       ser.write(key.encode())
       print("instruction " + key + " sent")
