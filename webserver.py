@@ -12,7 +12,7 @@ import argparse
 import serial
 
 
-ser = serial.Serial('/dev/ttyUSB0', 9600)
+ser = serial.Serial('/dev/ttyACM0', 9600)
 instructions = {'a', 's', 'd' ,'w', 'k', 'r'}
 parser = argparse.ArgumentParser()
 parser.add_argument("ml", type=str)
