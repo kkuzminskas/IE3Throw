@@ -25,7 +25,7 @@ else:
    ml = False
    print("Not doing facial recognition")
 
-video_cap = cv2.VideoCapture(1)
+video_cap = cv2.VideoCapture(0)
 cascPath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 log.basicConfig(filename='webcam.log',level=log.INFO)
@@ -97,7 +97,6 @@ def video_feed():
 @app.route("/postmethod",methods = ['POST'])
 def parseJSdata():
    key = request.form['keyboard']
-   print("key")
    if(key in instructions):
       ser.write(key.encode())
       print("instruction " + key + " sent")
